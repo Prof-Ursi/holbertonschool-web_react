@@ -7,3 +7,8 @@ interface Teacher {
     location: string;
     [attributeName: string]: any;
 }
+
+// Create interface named Directors extending Teacher
+interface Directors extends Teacher {
+    numberOfReports: number;
+}
