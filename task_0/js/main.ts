@@ -1,4 +1,4 @@
-//create interface named Student
+// Create interface named Student
 interface Student {
     firstName: string;
     lastName: string;
@@ -6,7 +6,7 @@ interface Student {
     location: string;
 }
 
-//create 2 student variables
+// Create 2 student variables
 const student1: Student = {
     firstName: 'John',
     lastName: 'Doe',
@@ -21,22 +21,23 @@ const student2: Student = {
     location: 'Chicago'
 };
 
-//store the 2 students variables in an array
+// Store the 2 students variables in an array
 const studentsList: Array<Student> = [student1, student2];
 
-//using JS, render a table, and for each element in the array, append a new row to the table
+// Using JS, render a table, and for each element in the array, append a new row to the table.
+// Each row should have 2 cells, one for the first name and one for the location.
 document.addEventListener("DOMContentLoaded", function () {
     const table = document.createElement("table");
 
     // Create header row
     const headerRow = table.insertRow();
-    const headerNames = ["First Name", "Last Name", "Age", "Location"];
+    const headerNames = ["First Name", "Location"];
     headerNames.forEach((name) => {
       const th = document.createElement("th");
       th.textContent = name;
       headerRow.appendChild(th);
     });
-  
+
     // Append a row for each student in studentsList
     studentsList.forEach((student) => {
       const row = table.insertRow();
